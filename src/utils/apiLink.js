@@ -1,1 +1,1 @@
-export const apiBaseLink = "www.thecocktaildb.com/api/json/v1/1";
+export const apiBaseLink = 'www.thecocktaildb.com/api/json/v1/1'
