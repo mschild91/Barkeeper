@@ -10,6 +10,10 @@ export default withMT({
       Montserrat: ['Montserrat', 'sans-serif'],
       Playfair: ['Playfair_Display', 'sans-serif'],
     },
+    colors: {
+      'project-blue': '#262B46',
+      'project-white': '#FFFFFF',
+    },
   },
   plugins: [],
 })
