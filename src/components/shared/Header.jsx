@@ -19,7 +19,7 @@ const Header = () => {
           label="Search for Drink"
           value={drink}
           onChange={handleDrinkSearch}
-          className="pr-20"
+          className="pr-20 pt-2"
           color="white"
           containerProps={{
             className: 'min-w-0',

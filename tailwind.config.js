@@ -11,8 +11,8 @@ export default withMT({
       },
     },
     fontFamily: {
-      Montserrat: ['Montserrat', 'sans-serif'],
-      Playfair: ['Playfair_Display', 'sans-serif'],
+      montserrat: ['Montserrat', 'sans-serif'],
+      playfair: ['Playfair_Display', 'sans-serif'],
     },
     colors: {
       'project-blue': '#262B46',
