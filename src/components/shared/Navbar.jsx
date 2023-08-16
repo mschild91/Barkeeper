@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <nav className="bg-project-blue h-14 flex justify-between items-center px-7 sticky top-0">
-      <div>
-        <h1 className="font-playfair text-project-white text-sm font-bold tracking-wider leading-5">
-          D R I N K S & C H I L L
-        </h1>
-      </div>
+    <nav className="bg-project-blue h-14 flex justify-between items-center px-7 sticky top-0 z-10">
+      <Link to={'/'}>
+        <div>
+          <h1 className="font-playfair text-project-white text-sm font-bold tracking-wider leading-5">
+            D R I N K S & C H I L L
+          </h1>
+        </div>
+      </Link>
       <div>
         <Menu>
           <MenuHandler>
