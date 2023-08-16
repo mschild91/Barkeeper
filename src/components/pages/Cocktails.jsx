@@ -5,9 +5,11 @@ import CocktailsItem from '../shared/CocktailsItem'
 import { Spinner } from '@material-tailwind/react'
 
 function Cocktails() {
+
   const ingredient = useParams().ingredient
   const [cocktails, setCocktails] = useState([])
   const [isLoading, setIsLoading] = useState(true)
+
 
   const fetchLink =
     ingredient === 'Alcohol free'
