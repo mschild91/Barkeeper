@@ -30,7 +30,7 @@ const CocktailDetails = () => {
 
   return (
     <article className="flex justify-center bg-project-blue">
-      <Card className="bg-gray-300 text-black font-montserrat w-96 h-fit pt-10">
+      <Card className="pt-10 text-black bg-gray-300 font-montserrat w-96 h-fit">
         <CardHeader
           color="blue-gray"
           className="w-64 h-64">
