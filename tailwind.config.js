@@ -10,14 +10,13 @@ export default withMT({
         heading: ['52px'],
       },
       colors: {
-        "gin": "#6FC3DF",
-        "vodka": "#8D82C4",
-        "rum": "#EC8D81",
-        "scotch": "#E7B788",
-        "non_alcoholic": "#8EA9E8",
-        "random": "#87C5A4",
-
-      }
+        gin: '#6FC3DF',
+        vodka: '#8D82C4',
+        rum: '#EC8D81',
+        scotch: '#E7B788',
+        non_alcoholic: '#8EA9E8',
+        random: '#87C5A4',
+      },
     },
     fontFamily: {
       montserrat: ['Montserrat', 'sans-serif'],
@@ -26,15 +25,12 @@ export default withMT({
     colors: {
       'project-blue': '#262B46',
       'project-white': '#FFFFFF',
-      "gin": "#6FC3DF",
-      "vodka": "#8D82C4",
-      "rum": "#EC8D81",
-      "scotch": "#E7B788",
-      "non_alcoholic": "#8EA9E8",
-      "random": "#87C5A4",
-    },
-    height: {
-      120: '30rem',
+      gin: '#6FC3DF',
+      vodka: '#8D82C4',
+      rum: '#EC8D81',
+      scotch: '#E7B788',
+      non_alcoholic: '#8EA9E8',
+      random: '#87C5A4',
     },
   },
   plugins: [],

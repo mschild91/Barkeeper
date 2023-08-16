@@ -9,8 +9,10 @@ const CocktailDetails = () => {
 
   const cocktailId = useParams().id
 
+  const fetchLink = cocktailId === 'random' ? `${apiBaseLink}/random.php` : `${apiBaseLink}/lookup.php?i=${cocktailId}`
+
   useEffect(() => {
-    fetch(`${apiBaseLink}/lookup.php?i=${cocktailId}`)
+    fetch(fetchLink)
       .then((response) => {
         if (!response) {
           throw new Error('Fetch didnt work!')

@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <nav className="bg-project-blue h-14 flex justify-between items-center px-7 sticky top-0 z-10">
+    <nav className="sticky top-0 z-10 flex items-center justify-between bg-project-blue h-14 px-7">
       <Link to={'/'}>
         <div>
-          <h1 className="font-playfair text-project-white text-sm font-bold tracking-wider leading-5">
+          <h1 className="text-sm font-bold leading-5 tracking-wider font-playfair text-project-white">
             D R I N K S & C H I L L
           </h1>
         </div>
@@ -15,14 +15,18 @@ const Navbar = () => {
       <div>
         <Menu>
           <MenuHandler>
-            <Button className="bg-project-blue text-project-white font-montserrat text-sm font-normal">Menu</Button>
+            <Button className="text-sm font-normal bg-project-blue text-project-white font-montserrat">Menu</Button>
           </MenuHandler>
           <MenuList className="bg-project-blue text-project-white font-montserrat">
             <Link to={'/'}>
               <MenuItem>Home</MenuItem>
             </Link>
-            <MenuItem>Random Drink</MenuItem>
-            <MenuItem>Create Own Drink</MenuItem>
+            <Link to={'/cocktail/random'}>
+              <MenuItem>Random Drink</MenuItem>
+            </Link>
+            <Link to={'/create'}>
+              <MenuItem>Create Own Drink</MenuItem>
+            </Link>
           </MenuList>
         </Menu>
       </div>
