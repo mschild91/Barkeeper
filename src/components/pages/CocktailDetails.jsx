@@ -32,15 +32,17 @@ const CocktailDetails = () => {
 
   return (
     <article className="flex justify-center bg-project-blue">
-      <Card className="pt-10 text-black bg-gray-300 font-montserrat w-96 h-fit">
+      <Card className="pt-10 text-black bg-gray-300 font-montserrat w-96 h-fit md:w-fit md:flex md:flex-row md:pb-6 md:pt-3 md:pl-8 md:pr-8">
         <CardHeader
           color="blue-gray"
-          className="w-64 h-64">
-          <img
-            className="w-64 h-64"
-            src={cocktailDetails.drinks[0].strDrinkThumb}
-            alt={cocktailDetails.drinks[0].strDrink}
-          />
+          className="w-64 h-64 md:mt-14">
+          <div>
+            <img
+              className="w-64 h-64"
+              src={cocktailDetails.drinks[0].strDrinkThumb}
+              alt={cocktailDetails.drinks[0].strDrink}
+            />
+          </div>
         </CardHeader>
         <CardBody>
           <h1 className="pb-6 text-xl font-medium">{cocktailDetails.drinks[0].strDrink}</h1>
@@ -108,7 +110,7 @@ const CocktailDetails = () => {
             </p>
           </div>
           <div>
-            <p>{cocktailDetails.drinks[0].strInstructions}</p>
+            <p className="md:w-72 xl:w-96">{cocktailDetails.drinks[0].strInstructions}</p>
           </div>
         </CardBody>
       </Card>

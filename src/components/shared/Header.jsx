@@ -5,23 +5,19 @@ import { useState } from 'react'
 
 import { useLocation, useNavigate } from 'react-router-dom'
 
-
 const Header = () => {
-	const [drink, setDrink] = useState('')
-	const handleDrinkSearch = ({ target }) => setDrink(target.value)
+  const [drink, setDrink] = useState('')
+  const handleDrinkSearch = ({ target }) => setDrink(target.value)
 
   const createLocation = useLocation()
   const navigate = useNavigate()
 
-	const handleSearch = (event) => {
-		if (
-			(event.type === 'keydown' && event.key === 'Enter') ||
-			event.type === 'click'
-		) {
-			navigate(`/cocktails/search/${drink}`)
-			setDrink('')
-		}
-	}
+  const handleSearch = (event) => {
+    if ((event.type === 'keydown' && event.key === 'Enter') || event.type === 'click') {
+      navigate(`/cocktails/search/${drink}`)
+      setDrink('')
+    }
+  }
 
   return (
     <header className="pt-16 pl-12 bg-project-blue text-project-white pb-14 pr-14">
