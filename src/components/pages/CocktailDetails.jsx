@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { apiBaseLink } from '../../utils/apiLink'
-import { Card, CardHeader, CardBody, CardFooter, Typography, Button, Spinner } from '@material-tailwind/react'
+import { Card, CardHeader, CardBody, Spinner } from '@material-tailwind/react'
 
 const CocktailDetails = () => {
   const [cocktailDetails, setCocktailDetails] = useState([])
