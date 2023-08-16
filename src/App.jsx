@@ -9,8 +9,10 @@ import Footer from './components/shared/Footer'
 import ScrollToTop from './components/shared/ScrollToTop'
 
 import CocktailDetails from './components/pages/CocktailDetails'
+import CreateOwnDrink from './components/pages/CreateOwnDrink'
 
 function App() {
+
 	return (
 		<>
 			<ScrollToTop />
@@ -29,6 +31,10 @@ function App() {
 					path="/cocktail/:id"
 					element={<CocktailDetails />}
 				/>
+        <Route
+          path="/create"
+          element={<CreateOwnDrink />}
+        />
 			</Routes>
 			<Footer />
 		</>

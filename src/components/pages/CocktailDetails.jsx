@@ -9,8 +9,10 @@ const CocktailDetails = () => {
 
   const cocktailId = useParams().id
 
+  const fetchLink = cocktailId === 'random' ? `${apiBaseLink}/random.php` : `${apiBaseLink}/lookup.php?i=${cocktailId}`
+
   useEffect(() => {
-    fetch(`${apiBaseLink}/lookup.php?i=${cocktailId}`)
+    fetch(fetchLink)
       .then((response) => {
         if (!response) {
           throw new Error('Fetch didnt work!')
@@ -30,7 +32,7 @@ const CocktailDetails = () => {
 
   return (
     <article className="flex justify-center bg-project-blue">
-      <Card className="bg-gray-300 text-black font-montserrat w-96 h-fit pt-10">
+      <Card className="pt-10 text-black bg-gray-300 font-montserrat w-96 h-fit">
         <CardHeader
           color="blue-gray"
           className="w-64 h-64">
