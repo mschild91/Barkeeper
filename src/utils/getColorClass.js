@@ -19,6 +19,9 @@ export function getColorClassFrom(ingredient) {
     case 'random':
       color = 'from-random'
       break
+    case "search":
+      color = "from-orange-500"
+      break
     default:
       break
   }
@@ -44,6 +47,9 @@ export function getColorClassBg(ingredient) {
       break
     case 'random':
       color = 'bg-random'
+      break
+    case "search":
+      color = "bg-orange"
       break
     default:
       break

@@ -11,28 +11,28 @@ import ScrollToTop from './components/shared/ScrollToTop'
 import CocktailDetails from './components/pages/CocktailDetails'
 
 function App() {
-  return (
-    <>
-      <ScrollToTop />
-      <Navbar />
-      <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={<Home />}
-        />
-        <Route
-          path="/cocktails/:ingredient"
-          element={<Cocktails />}
-        />
-        <Route
-          path="/cocktail/:id"
-          element={<CocktailDetails />}
-        />
-      </Routes>
-      <Footer />
-    </>
-  )
+	return (
+		<>
+			<ScrollToTop />
+			<Navbar />
+			<Header />
+			<Routes>
+				<Route
+					path="/"
+					element={<Home />}
+				/>
+				<Route
+					path="/cocktails/:ingredient/:searchTerm?"
+					element={<Cocktails />}
+				/>
+				<Route
+					path="/cocktail/:id"
+					element={<CocktailDetails />}
+				/>
+			</Routes>
+			<Footer />
+		</>
+	)
 }
 
 export default App
