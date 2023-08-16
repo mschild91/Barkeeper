@@ -7,6 +7,7 @@ import Navbar from './components/shared/Navbar'
 import Header from './components/shared/Header'
 import Footer from './components/shared/Footer'
 import ScrollToTop from './components/shared/ScrollToTop'
+
 import CocktailDetails from './components/pages/CocktailDetails'
 
 function App() {

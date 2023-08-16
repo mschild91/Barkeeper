@@ -5,47 +5,48 @@ import CocktailsItem from '../shared/CocktailsItem'
 import { Spinner } from '@material-tailwind/react'
 
 function Cocktails() {
-  const ingredient = useParams().ingredient
-  const [cocktails, setCocktails] = useState([])
-  const [isLoading, setIsLoading] = useState(true)
+	const ingredient = useParams().ingredient
+	const [cocktails, setCocktails] = useState([])
+	const [isLoading, setIsLoading] = useState(true)
 
-  const fetchLink =
-    ingredient === 'Alcohol free'
-      ? `${apiBaseLink}/filter.php?a=Non_Alcoholic`
-      : `${apiBaseLink}/filter.php?i=${ingredient}`
+	const fetchLink =
+		ingredient === 'Alcohol free'
+			? `${apiBaseLink}/filter.php?a=Non_Alcoholic`
+			: `${apiBaseLink}/filter.php?i=${ingredient}`
 
-  useEffect(() => {
-    fetch(fetchLink)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('fetch failed')
-        }
-        return response.json()
-      })
-      .then((data) => {
-        // console.log(data.drinks)
-        setCocktails(data.drinks)
-        setIsLoading(false)
-      })
-      .catch((error) => console.log(error))
-  }, [])
+	useEffect(() => {
+		fetch(fetchLink)
+			.then((response) => {
+				if (!response.ok) {
+					throw new Error('fetch failed')
+				}
+				return response.json()
+			})
+			.then((data) => {
+				// console.log(data.drinks)
+				setCocktails(data.drinks)
+				setIsLoading(false)
+			})
+			.catch((error) => console.log(error))
+	}, [])
 
-  if (isLoading) {
-    return <Spinner color="amber" />
-  }
+	if (isLoading) {
+		return <Spinner color="amber" />
+	}
 
-  return (
-    <main>
-      {cocktails.map((cocktail) => {
-        return (
-          <CocktailsItem
-            key={cocktail.strDrink}
-            cocktail={cocktail}
-          />
-        )
-      })}
-    </main>
-  )
+	return (
+		<main>
+			{cocktails.map((cocktail) => {
+				return (
+					<CocktailsItem
+						key={cocktail.strDrink}
+						cocktail={cocktail}
+						ingredient={ingredient}
+					/>
+				)
+			})}
+		</main>
+	)
 }
 
 export default Cocktails
