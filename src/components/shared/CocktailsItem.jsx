@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { getColorClassFrom } from '../../utils/getColorClass'
 
-
 function CocktailsItem({ cocktail, ingredient }) {
 	const color = getColorClassFrom(ingredient)
 	return (
