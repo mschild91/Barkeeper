@@ -3,30 +3,30 @@ import './App.css'
 
 import Home from './components/pages/Home'
 import Cocktails from './components/pages/Cocktails'
-import Navbar from './components/pages/Navbar'
-import Header from './components/pages/Header'
-import Footer from './components/pages/Footer'
-import ScrollToTop from './components/pages/ScrollToTop'
+import Navbar from './components/shared/Navbar'
+import Header from './components/shared/Header'
+import Footer from './components/shared/Footer'
+import ScrollToTop from './components/shared/ScrollToTop'
 
 function App() {
-  return (
-    <>
-      <ScrollToTop />
-      <Navbar />
-      <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={<Home />}
-        />
-        <Route
-          path="/cocktails/:ingredient"
-          element={<Cocktails />}
-        />
-      </Routes>
-      <Footer />
-    </>
-  )
+	return (
+		<>
+			<ScrollToTop />
+			<Navbar />
+			<Header />
+			<Routes>
+				<Route
+					path="/"
+					element={<Home />}
+				/>
+				<Route
+					path="/cocktails/:ingredient"
+					element={<Cocktails />}
+				/>
+			</Routes>
+			<Footer />
+		</>
+	)
 }
 
 export default App

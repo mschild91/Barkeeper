@@ -5,7 +5,7 @@ import CocktailsItem from '../shared/CocktailsItem'
 
 function Cocktails() {
 	const ingredient = useParams().ingredient
-	console.log(ingredient)
+	// console.log(ingredient)
 	const [cocktails, setCocktails] = useState([])
 
 	const fetchLink =
@@ -35,6 +35,7 @@ function Cocktails() {
 					<CocktailsItem
 						key={cocktail.strDrink}
 						cocktail={cocktail}
+						ingredient={ingredient}
 					/>
 				)
 			})}
