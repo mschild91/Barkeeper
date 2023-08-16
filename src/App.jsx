@@ -12,32 +12,33 @@ import CocktailDetails from './components/pages/CocktailDetails'
 import CreateOwnDrink from './components/pages/CreateOwnDrink'
 
 function App() {
-  return (
-    <>
-      <ScrollToTop />
-      <Navbar />
-      <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={<Home />}
-        />
-        <Route
-          path="/cocktails/:ingredient"
-          element={<Cocktails />}
-        />
-        <Route
-          path="/cocktail/:id"
-          element={<CocktailDetails />}
-        />
+
+	return (
+		<>
+			<ScrollToTop />
+			<Navbar />
+			<Header />
+			<Routes>
+				<Route
+					path="/"
+					element={<Home />}
+				/>
+				<Route
+					path="/cocktails/:ingredient/:searchTerm?"
+					element={<Cocktails />}
+				/>
+				<Route
+					path="/cocktail/:id"
+					element={<CocktailDetails />}
+				/>
         <Route
           path="/create"
           element={<CreateOwnDrink />}
         />
-      </Routes>
-      <Footer />
-    </>
-  )
+			</Routes>
+			<Footer />
+		</>
+	)
 }
 
 export default App

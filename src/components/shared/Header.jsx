@@ -2,13 +2,26 @@ import React from 'react'
 import arrowSVG from '../../assets/img/arrows.svg'
 import { Input, Button } from '@material-tailwind/react'
 import { useState } from 'react'
-import { useLocation } from 'react-router-dom'
+
+import { useLocation, useNavigate } from 'react-router-dom'
+
 
 const Header = () => {
-  const [drink, setDrink] = useState('')
-  const handleDrinkSearch = ({ target }) => setDrink(target.value)
+	const [drink, setDrink] = useState('')
+	const handleDrinkSearch = ({ target }) => setDrink(target.value)
 
   const createLocation = useLocation()
+  const navigate = useNavigate()
+
+	const handleSearch = (event) => {
+		if (
+			(event.type === 'keydown' && event.key === 'Enter') ||
+			event.type === 'click'
+		) {
+			navigate(`/cocktails/search/${drink}`)
+			setDrink('')
+		}
+	}
 
   return (
     <header className="pt-16 pl-12 bg-project-blue text-project-white pb-14 pr-14">
@@ -24,6 +37,7 @@ const Header = () => {
               label="Search for Drink"
               value={drink}
               onChange={handleDrinkSearch}
+              onKeyDown={handleSearch}
               className="pt-2 pr-20"
               color="white"
               containerProps={{
@@ -31,6 +45,7 @@ const Header = () => {
               }}
             />
             <Button
+              onClick={handleSearch}
               size="sm"
               color={'orange'}
               disabled={!drink}
