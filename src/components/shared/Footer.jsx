@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 const Footer = () => {
   return (
@@ -7,9 +7,11 @@ const Footer = () => {
         Enjoyment has many facets...
       </h1>
       <p className="pl-12 font-montserrat pr-14">
-        ...but without the right measure, it's not possible! Cocktails can be enjoyed with all senses. Cocktail
-        enjoyment includes not only the taste, but also the appearance, the color, and the various aromas that, when
-        combined, evoke entirely new associations and subconsciously influence the taste.
+        ...but without the right measure, it's not possible! Cocktails can be
+        enjoyed with all senses. Cocktail enjoyment includes not only the taste,
+        but also the appearance, the color, and the various aromas that, when
+        combined, evoke entirely new associations and subconsciously influence
+        the taste.
       </p>
     </footer>
   )
