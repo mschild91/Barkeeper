@@ -12,34 +12,28 @@ const CreateOwnDrink = () => {
     const ownDrinksStorage = JSON.parse(localStorage.getItem("ownDrinks"))
     return ownDrinksStorage ? ownDrinksStorage : []
   })
-  console.log(ownDrinks)
-  console.log(ownDrinks.length || "not true")
 
   const handleOwnDrink = (event) => {
     event.preventDefault()
-    // console.log(event)
 
     const formData = new FormData(event.target)
-    // console.log(formData)
     const userDrink = Object.fromEntries(formData)
-    // console.log(userDrink)
 
     setOwnDrink(userDrink)
   }
-
   useEffect(() => {
     if (ownDrink) {
       const idDrink = crypto.randomUUID()
-      console.log(idDrink)
-      // console.log(ownDrink)
       setOwnDrinks((prevOwnDrinks) => [
         ...prevOwnDrinks,
         { ...ownDrink, idDrink },
       ])
-      // console.log(ownDrinks)
-      localStorage.setItem("ownDrinks", JSON.stringify(ownDrinks))
     }
   }, [ownDrink])
+
+  useEffect(() => {
+    localStorage.setItem("ownDrinks", JSON.stringify(ownDrinks))
+  }, [ownDrinks])
 
   return (
     <main className="bg-project-blue">
@@ -155,7 +149,6 @@ const CreateOwnDrink = () => {
               label="Name"
               color="amber"
               required
-              defaultValue="helmut"
             />
             <Input
               name="strCategory"
@@ -163,7 +156,6 @@ const CreateOwnDrink = () => {
               label="Category"
               color="amber"
               required
-              defaultValue="helmut"
             />
             <Input
               name="strDrinkThumb"
@@ -171,7 +163,6 @@ const CreateOwnDrink = () => {
               label="Picture URL"
               color="amber"
               required
-              defaultValue="helmut"
             />
             <Textarea
               className="placeholder:text-project-white"
@@ -179,7 +170,6 @@ const CreateOwnDrink = () => {
               color="amber"
               label="Instructions"
               required
-              defaultValue="helmut"
             />
             <Input
               name="strIngredient1"
@@ -187,7 +177,6 @@ const CreateOwnDrink = () => {
               label="Ingredient 1"
               color="amber"
               required
-              defaultValue="helmut"
             />
             <Input
               name="strMeasure1"
@@ -195,7 +184,6 @@ const CreateOwnDrink = () => {
               label="Measure of Ingredient 1"
               color="amber"
               required
-              defaultValue="helmut"
             />
             <Input
               name="strIngredient2"
