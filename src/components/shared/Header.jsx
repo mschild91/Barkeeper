@@ -1,5 +1,5 @@
 import React from "react"
-import arrowSVG from "../../assets/img/arrows.svg"
+import arrowSVG from "../../assets/img/Arrows.svg"
 import { Input, Button } from "@material-tailwind/react"
 import { useState } from "react"
 
