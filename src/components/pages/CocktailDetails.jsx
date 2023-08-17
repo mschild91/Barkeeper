@@ -27,7 +27,7 @@ const CocktailDetails = () => {
         setIsLoading(false)
       })
       .catch((error) => console.log(error.message))
-  }, [])
+  }, [cocktailId])
 
   if (isLoading) {
     return <Spinner color="amber" />
