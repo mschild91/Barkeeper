@@ -1,14 +1,16 @@
-import { Input, Textarea, Button } from '@material-tailwind/react'
-import React from 'react'
-import formImageOne from '../../assets/img/form-image-1.png'
-import formImageTwo from '../../assets/img/form-image-2.png'
-import formImageThree from '../../assets/img/form-image-3.png'
+import { Input, Textarea, Button } from "@material-tailwind/react"
+import React from "react"
+import formImageOne from "../../assets/img/form-image-1.png"
+import formImageTwo from "../../assets/img/form-image-2.png"
+import formImageThree from "../../assets/img/form-image-3.png"
 
 const CreateOwnDrink = () => {
   return (
     <section className="gap-24 pt-10 pb-10 bg-gray-300 text-project-blue xl:flex xl:justify-center">
       <div>
-        <h1 className="pb-10 text-3xl text-center font-playfair xl:text-left xl:ml-32">Create your own Drinks!</h1>
+        <h1 className="pb-10 text-3xl text-center font-playfair xl:text-left xl:ml-32">
+          Create your own Drinks!
+        </h1>
         <form className="flex flex-col gap-3 m-auto w-80 xl:ml-32">
           <Input
             size="lg"
@@ -64,7 +66,7 @@ const CreateOwnDrink = () => {
             <Button
               className="w-60"
               size="sm"
-              color={'orange'}>
+              color={"orange"}>
               Submit
             </Button>
           </div>

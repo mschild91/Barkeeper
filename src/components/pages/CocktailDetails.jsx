@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import { apiBaseLink } from '../../utils/apiLink'
-import { Card, CardHeader, CardBody, Spinner } from '@material-tailwind/react'
+import React, { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
+import { apiBaseLink } from "../../utils/apiLink"
+import { Card, CardHeader, CardBody, Spinner } from "@material-tailwind/react"
 
 const CocktailDetails = () => {
   const [cocktailDetails, setCocktailDetails] = useState([])
@@ -9,13 +9,16 @@ const CocktailDetails = () => {
 
   const cocktailId = useParams().id
 
-  const fetchLink = cocktailId === 'random' ? `${apiBaseLink}/random.php` : `${apiBaseLink}/lookup.php?i=${cocktailId}`
+  const fetchLink =
+    cocktailId === "random"
+      ? `${apiBaseLink}/random.php`
+      : `${apiBaseLink}/lookup.php?i=${cocktailId}`
 
   useEffect(() => {
     fetch(fetchLink)
       .then((response) => {
         if (!response) {
-          throw new Error('Fetch didnt work!')
+          throw new Error("Fetch didnt work!")
         }
         return response.json()
       })
@@ -45,7 +48,9 @@ const CocktailDetails = () => {
           </div>
         </CardHeader>
         <CardBody>
-          <h1 className="pb-6 text-xl font-medium">{cocktailDetails.drinks[0].strDrink}</h1>
+          <h1 className="pb-6 text-xl font-medium">
+            {cocktailDetails.drinks[0].strDrink}
+          </h1>
           <div className="pb-6">
             <h3 className="text-lg font-medium">Ingredients:</h3>
             <p>
@@ -110,7 +115,9 @@ const CocktailDetails = () => {
             </p>
           </div>
           <div>
-            <p className="md:w-72 xl:w-96">{cocktailDetails.drinks[0].strInstructions}</p>
+            <p className="md:w-72 xl:w-96">
+              {cocktailDetails.drinks[0].strInstructions}
+            </p>
           </div>
         </CardBody>
       </Card>
