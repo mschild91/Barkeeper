@@ -1,6 +1,6 @@
-# Cocktail Showcase Website - SuperCode Bootcamp Project
+# Drinks & Chill - SuperCode Bootcamp Project
 
-Welcome to our Cocktail Showcase Website project repository! This project was created as part of the SuperCode Bootcamp and was developed by our group. 
+Welcome to our Drinks & Chill project repository! This project was created as part of the SuperCode Bootcamp and was developed by our group. 
 
 ## Project Overview
 
