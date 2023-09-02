@@ -17,3 +17,5 @@ This project is a mobile-friendly website that allows users to browse and discov
 - Search for cocktails by name.
 - You can create your own drink and save it to your local storage, allowing you to revisit your creations later. Please note that we haven't implemented a backend yet, hence the use of local storage.
 - Mobile-responsive design ensures an optimal user experience on all devices.
+
+You can find the deployed Version here: https://wonderful-figolla-a29f4c.netlify.app
